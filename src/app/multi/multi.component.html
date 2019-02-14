@@ -1,0 +1,30 @@
+<div [formGroup]="container.control">
+ 
+  <span *ngIf="control.label" [innerHtml]="control.label"></span>
+ 
+    <ng-container *ngFor="let innerControl of control.controls"
+      [ngSwitch]="true">
+ 
+      <ng-container *ngIf="container.control.get(innerControl.name)">
+        <div>
+          <label *ngIf="innerControl.label" [innerHtml]="innerControl.label"></label>
+ 
+          <ng-container *ngSwitchCase="innerControl.type === 'inputtext'">
+            <div>
+              <input #input type="text"
+                  [formControlName]="innerControl.name" />
+            </div>
+          </ng-container>
+ 
+          <ng-container *ngSwitchCase="innerControl.type === 'randomtext'">
+            <div>
+              Lorem ipsum dolor sit amet
+            </div>
+          </ng-container>
+ 
+        </div>
+      </ng-container>
+ 
+    </ng-container>
+</div>
+ 
