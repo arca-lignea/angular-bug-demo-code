@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
 <br>
-Bug is in app.component.ts.  When debounceTime is uncommented the UI lags by one user event.
+Relevant code is in app.component.ts.  When debounceTime is uncommented the UI lags by one user event.
 
 ## Development server
 
